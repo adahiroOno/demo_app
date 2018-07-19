@@ -1,0 +1,38 @@
+current directory: /Users/sadahiro/rails_projects/demo_app/vendor/bundle/gems/psych-2.0.17/ext/psych
+/Users/sadahiro/.rbenv/versions/1.9.3-p0/bin/ruby -r ./siteconf20180719-7390-hgi0lx.rb extconf.rb
+checking for yaml.h... yes
+checking for yaml_get_version() in -lyaml... yes
+creating Makefile
+
+current directory: /Users/sadahiro/rails_projects/demo_app/vendor/bundle/gems/psych-2.0.17/ext/psych
+make  clean
+
+current directory: /Users/sadahiro/rails_projects/demo_app/vendor/bundle/gems/psych-2.0.17/ext/psych
+make
+compiling psych_to_ruby.c
+compiling psych_yaml_tree.c
+compiling psych_emitter.c
+psych_emitter.c: In function 'start_document':
+psych_emitter.c:4:29: warning: initialization makes integer from pointer without a cast [-Wint-conversion]
+ #define RARRAY_CONST_PTR(s) (const VALUE *)RARRAY_PTR(s)
+                             ^
+psych_emitter.c:7:27: note: in expansion of macro 'RARRAY_CONST_PTR'
+ #define RARRAY_AREF(a, i) RARRAY_CONST_PTR(a)[i]
+                           ^~~~~~~~~~~~~~~~
+psych_emitter.c:182:20: note: in expansion of macro 'RARRAY_AREF'
+      VALUE tuple = RARRAY_AREF(tags, i);
+                    ^~~~~~~~~~~
+psych_emitter.c:192:12: warning: assignment makes integer from pointer without a cast [-Wint-conversion]
+      name  = RARRAY_AREF(tuple, 0);
+            ^
+psych_emitter.c:193:12: warning: assignment makes integer from pointer without a cast [-Wint-conversion]
+      value = RARRAY_AREF(tuple, 1);
+            ^
+compiling psych.c
+compiling psych_parser.c
+linking shared-object psych.bundle
+
+current directory: /Users/sadahiro/rails_projects/demo_app/vendor/bundle/gems/psych-2.0.17/ext/psych
+make  install
+/usr/local/bin/ginstall -c -m 0755 psych.bundle .gem.20180719-7390-1xokn7o
+installing default psych libraries
